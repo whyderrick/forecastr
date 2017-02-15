@@ -2,6 +2,7 @@
 
 ## Goals
 Query the Yahoo API for weather data and display forecast for the next 10 days. This app aims to do the following 6 things:
+
 1. Allow a user to select from a list of U.S. cities (selection should be "sticky" meaning selection persists between browser sessions)
 2. Show the current weather for user-selected city using the Yahoo Weather API https://developer.yahoo.com/weather/
 3. Should also show weather for the next 10 days
