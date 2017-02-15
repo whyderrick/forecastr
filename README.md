@@ -16,10 +16,11 @@ Query the Yahoo API for weather data and display forecast for the next 10 days. 
 
 ## Time spent
 ### Environment Setup
-- 9:30 - 9:45: Cloning Sinatra skeleton files 
+- 9:30 - 9:45: Cloning Sinatra skeleton files
 
 ### Development
 - 920 - 930: Looking at the Yahoo API responses
+
 ## Stack
 - Sinatra
 - Postgres
