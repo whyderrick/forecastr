@@ -19,10 +19,9 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-require 'bcrypt'
+require 'haml'
 require 'httparty'
-require 'dotenv'
-Dotenv.load
+
 require 'json'
 
 # Some helper constants for path-centric logic

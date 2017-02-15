@@ -29,3 +29,4 @@ end
 
 
 gem 'httparty'
+gem 'haml'
