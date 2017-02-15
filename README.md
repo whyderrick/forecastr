@@ -17,13 +17,13 @@ Query the Yahoo API for weather data and display forecast for the next 10 days. 
 ## Time spent
 ### Environment Setup
 - 9:30 - 9:45: Cloning Sinatra skeleton files
+- 9:45 - 9:55: README and GitHub setup
 
 ### Development
-- 920 - 930: Looking at the Yahoo API responses
+- 9:20 - 9:30: Looking at the Yahoo API responses
 
 ## Stack
-- Sinatra
-- Postgres
+- Sinatra Ruby Framework
 - Yahoo API
 - Materialize CSS Framework
 - Homespun CSS
