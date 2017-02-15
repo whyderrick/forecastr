@@ -2,15 +2,13 @@ class API_Consumer
   # Since this app never hits the database, there's no need to inherit
   # from ActiveRecord::Base
 
-  # Need a method to make a call to Yahoo
-  # Need a method to parse that response into useful things to pass to the client
   def self.parse_forecast(query)
     weather_api_response = self.query_weather_api(query)
-    # ten_day_fc = weather_api_response["query"]["results"]["channel"]["item"]["forecast"]
-    # {
-    #   today: ten_day_fc[0],
-    #   next_nine_days: ten_day_fc[1..-1]
-    # }
+    ten_day_fc = weather_api_response["query"]["results"]["channel"]["item"]["forecast"]
+    {
+      today: ten_day_fc[0],
+      next_nine_days: ten_day_fc[1..-1]
+    }
   end
 
   private
