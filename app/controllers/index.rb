@@ -5,8 +5,8 @@ get '/' do
 end
 
 post '/' do
+  # session[:current_city] = params[:city]
   consumer = API_Consumer.new
-  data_return = API_Consumer.get_forecast(params[:city])
-
-  @forecast = data_return["query"]["results"]["channel"]["item"]["forecast"]
+  @data_return = API_Consumer.parse_forecast(params[:city])
+  @data_return.to_json
 end
