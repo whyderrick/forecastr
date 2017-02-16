@@ -1,3 +1,10 @@
-%li
-  %p
-    = locals[:day].day_of_week
+%dt
+  = locals[:day].day_of_week + ", " + locals[:day].date
+%dd
+  %ul
+    %li.low-temp
+      = "Low: #{locals[:day].low} "
+    %li.high-temp
+      = "High: #{locals[:day].high}"
+    %li.condition
+      = locals[:day].text
