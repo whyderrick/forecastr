@@ -1,4 +1,4 @@
-require_relative '../models/api_consumer'
+require_relative '../models/forecast'
 
 get '/' do
   haml :'/index'
@@ -6,7 +6,11 @@ end
 
 post '/' do
   session[:current_city] = params[:city]
-  consumer = API_Consumer.new
-  @data_return = API_Consumer.parse_forecast(params[:city])
-  @data_return.to_json
+  forecast = Forecast.new(params[:city])
+
+  @results = forecast.get_daily_forecast
+
+  if request.xhr?
+    haml :'forecasts/index', layout: false
+  end
 end
