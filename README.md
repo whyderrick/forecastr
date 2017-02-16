@@ -17,17 +17,25 @@ Query the Yahoo API for weather data and display forecast for the next 10 days. 
 
 ## Time spent
 ### Environment Setup
+**Total: 103 minutes**
+#### Wednesday Night
 - 9:30 - 9:45: Cloning Sinatra skeleton files
 - 9:45 - 9:55: README and GitHub setup
+#### Thursday
+- 10:45 - 11:45: SASS and Materialize (trying to build an asset pipeline)
+- 12:40 - 1:03: Deployment (and GH Pages research)
 
 ### Development
+**Total: 9h 20m**
+#### Wednesday Night
 - 9:20 - 9:30: Looking at the Yahoo API responses
 - 10:00 - 12:30: Parser and Homepage setup
-- 10:45 - 12:00:
+#### Thursday
 - 2:10 - 3:45: Implementing classes
 - 3:45 - 5: Debugging AR and Sinatra
 - 8:45 - 9:40: Displaying the data in a desirable format
-- 9:45 - 11:59: Styling
+- 9:45 - 12:15: Styling
+- 12:15 - 12:40: Sticky feature
 
 ## Stack
 - Sinatra Ruby Framework
