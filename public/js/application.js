@@ -17,7 +17,8 @@ function getForecast() {
       method: method,
       data: data
     }).done(function(msg) {
-      $(".forecast-container").append(msg);
+      $(".sticky-forecast").empty();
+      $(".forecast-container").empty().append(msg);
     })
   })
 }

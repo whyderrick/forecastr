@@ -1,6 +1,5 @@
 .container.center
   %h1.brand-logo.blue-text Forecastr
-  .forecast-container
   .form-container
     %form#city-selector{action: "/", method: "post"}
       %select{name: "city"}
@@ -8,3 +7,7 @@
         %option{value: "san francisco ca"} San Francisco, CA
         %option{value: "mountain view ca"} Mountain View, CA
       %input{type: "submit", value: "Get your forecast!"}
+  - if @results
+    .sticky-forecast
+      = haml :'forecasts/index'
+  .forecast-container

@@ -1,6 +1,11 @@
 require_relative '../models/forecast'
 
 get '/' do
+  if session[:current_city]
+    forecast = Forecast.new(session[:current_city])
+
+    @results = forecast.get_daily_forecast
+  end
   haml :'/index'
 end
 
