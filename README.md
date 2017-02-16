@@ -23,6 +23,8 @@ Query the Yahoo API for weather data and display forecast for the next 10 days. 
 ### Development
 - 9:20 - 9:30: Looking at the Yahoo API responses
 - 10:00 - 12:30: Parser and Homepage setup
+- 10:45 - 12:00:
+- 2:10 - 3:45: Implementing classes
 
 ## Stack
 - Sinatra Ruby Framework

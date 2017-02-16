@@ -1,20 +1,21 @@
 class Forecast
-  attr_reader :query
-  attr_accessor :days
-  # Needs ActiveRecord now that it has a relationship to Day
+  attr_reader :query, :days
 
   def initialize(query)
     @query = query
-    @days = []
   end
 
   def get_daily_forecast
     forecast = parse_forecast
-    forecast[:result][:forecast].each do |day|
-      p Day.new(day)
-      @days << Day.new(day)
-    end
+    @days = forecast[:result][:forecast].map { |day| Day.new(day) }
+    result = {
+      location: forecast[:result][:location],
+      days: @days
+    }
+  end
 
+  def location
+    prep_location
   end
 
   private
@@ -28,9 +29,17 @@ class Forecast
       ten_day_fc = weather_api_response["query"]["results"]["channel"]["item"]["forecast"]
       parsed_result = {
         result: {
-          location: @query.titlecase,
+          location: prep_location,
           forecast: ten_day_fc
         }
       }
+    end
+
+    def prep_location
+      location = @query.titlecase.split(" ")
+      city = location[0...-1].join
+      region = location.last
+
+      city + ", " +  region.upcase
     end
 end

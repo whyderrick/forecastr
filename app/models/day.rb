@@ -1,5 +1,6 @@
 class Day
-
+  attr_reader :day_of_week, :date, :text, :high, :low
+  
   def initialize(options)
     @day_of_week = ABBREVIATED_FULL_DAY_NAMES[options["day"]]
     @date        = options["date"]
