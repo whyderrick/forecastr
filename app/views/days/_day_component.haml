@@ -8,3 +8,13 @@
       = "High: #{locals[:day].high}"
     %li.condition
       = locals[:day].text
+
+
+%dl
+  - @results[:days].each do |day|
+    = haml :'days/_day_component', locals: { :day => day}
+
+
+
+
+  

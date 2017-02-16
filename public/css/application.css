@@ -1,16 +1,1 @@
-body {
-  background-color: #ddd;
-  margin: 20px;
-}
 
-.container {
-  margin: 0 auto;
-  text-align: center;
-  width: 45em;
-
-}
-img.cover {
-  float:left;
-  margin-right: 15px;
-  width: 300px;
-}

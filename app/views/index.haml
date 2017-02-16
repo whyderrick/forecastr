@@ -1,11 +1,10 @@
-%h1.brand-logo.blue-text Forecastr
-
-.forecast-container
-
-.form-container
-  %form#city-selector{action: "/", method: "post"}
-    %select{name: "city"}
-      %option{value: "oakland ca"} Oakland, CA
-      %option{value: "san francisco ca"} San Francisco, CA
-      %option{value: "mountain view ca"} Mountain View, CA
-    %input{type: "submit", value: "Get your forecast!"}
+.container.center
+  %h1.brand-logo.blue-text Forecastr
+  .forecast-container
+  .form-container
+    %form#city-selector{action: "/", method: "post"}
+      %select{name: "city"}
+        %option{value: "oakland ca"} Oakland, CA
+        %option{value: "san francisco ca"} San Francisco, CA
+        %option{value: "mountain view ca"} Mountain View, CA
+      %input{type: "submit", value: "Get your forecast!"}

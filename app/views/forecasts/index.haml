@@ -1,6 +1,17 @@
 %h2.blue_text
   = "Forecast for #{@results[:location]}"
 .row
-%dl
-  - @results[:days].each do |day|
-    = haml :'days/_day_component', locals: { :day => day}
+  .col.s10.m8.offset-m2
+    .card.grey.lighten-2
+      .card-content.grey-text.text-darken-4
+        %span.card-title Today
+        - today = @results[:days].shift
+        %p
+          = "Expect conditions to be #{today.text}"
+        %ul
+          %li.high-temp
+            = "High: #{today.high}"
+          %li.low-temp
+            = "Low: #{today.low}"
+      .card-action
+        %i.material-icons visibility

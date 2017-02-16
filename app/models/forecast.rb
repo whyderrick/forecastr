@@ -37,7 +37,7 @@ class Forecast
 
     def prep_location
       location = @query.titlecase.split(" ")
-      city = location[0...-1].join
+      city = location[0...-1].join(" ")
       region = location.last
 
       city + ", " +  region.upcase
