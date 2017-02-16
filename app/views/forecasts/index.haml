@@ -1,0 +1,5 @@
+%h2
+  = "Forecast for #{@results[:location]}"
+%ul
+  - @results[:days].each do |day|
+    = haml :'days/_day_component', locals: { :day => day}
