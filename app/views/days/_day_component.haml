@@ -1,0 +1,14 @@
+.col.s8.m4.offset-s2
+  .card
+    .card-content.grey-text.text-darken-4
+      %span.card-title
+      = locals[:day].day_of_week + ", " + locals[:day].date
+      %p
+        = "Expect #{locals[:day].text}"
+      %ul
+        %li.high-temp
+          = "High: #{locals[:day].high}"
+        %li.low-temp
+          = "Low: #{locals[:day].low}"
+    .card-action.grey.lighten-2
+      %i.material-icons visibility
