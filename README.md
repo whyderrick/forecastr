@@ -1,19 +1,20 @@
-# Weather Viewer
+# Forecastr
 
-## Goals
-Query the Yahoo API for weather data and display forecast for the next 10 days. This app aims to do the following 6 things:
 
-[] Allow a user to select from a list of U.S. cities (selection should be "sticky" meaning selection persists between browser sessions)
-[x] Show the current weather for user-selected city using the Yahoo Weather API https://developer.yahoo.com/weather/
-[x] Should also show weather for the next 10 days
-[x] For each day (current and next 10 days) display the following:
-  - The date (e.g. "Monday, November 21st, 2016")
-  - High temp
-  - Low temp
-  - Description (e.g. "Partly Cloudy")
-[x]. Make app responsive/adaptive:  on a mobile phone, weather for next 10 days (boxes/tiles) should be stacked in portrait orientation (365px X 667px) and horizontal layout in landscape orientation
+Forcastr queries the Yahoo API for weather data and displays forecast for today and the next 10 days. For each day in the forecast it displays the date, high temp, low temp and text description of the conditions.
+It  allows the user to select from a list of cities, and persists that choice across sessions. It's a single-page app, built using Google's Materialize Framework and it works responsively.
+
+## Future Improvements
+- Serverless build that translates the classes in the in the models folder to JavaScript objects and constructors.
+- A dynamic view that animates an active forecast from a carousel.
+  - Enlarge the selected day from the list
+  - View the other days in a single carousel
+- Photos on the cards or icons in the bottom section of each that correspond to the day's `text` property.
 
 ## Testing Strategy at Larger Scale
+The current version of Forecastr has no tests :slightly_frowning_face:.
+In a future version of the app, there would be tests against the Yahoo API payload (ensuring there are no API changes), against the models themselves (to allow for refactoring), and against the interactions happening in the client side.
+I'm most familiar with Jasmine for JavaScript testing, and do a bit more research on the best way to manage the DOM manipulation tests. 
 
 ## Time spent
 ### Environment Setup
