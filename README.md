@@ -4,6 +4,8 @@
 Forcastr queries the Yahoo API for weather data and displays forecast for today and the next 10 days. For each day in the forecast it displays the date, high temp, low temp and text description of the conditions.
 It  allows the user to select from a list of cities, and persists that choice across sessions. It's a single-page app, built using Google's Materialize Framework and it works responsively.
 
+You can play with the live version at [forecastr-by-derrick.herokuapp.com](https://forecastr-by-derrick.herokuapp.com/).
+
 ## Future Improvements
 - Serverless build that translates the classes in the in the models folder to JavaScript objects and constructors.
 - A dynamic view that animates an active forecast from a carousel.
